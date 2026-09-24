@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raid Loot Demo · Intelligence</title>
+  <meta name="description" content="Interactive raid loot assign demo for Intelligence guild — placeholder classic-style drops." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Intelligence</span>
+        <span class="brand-sub">WoWForever · Guild</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-nav="index.html">Home</a></li>
+        <li><a href="loot.html" data-nav="loot.html">Loot FAQ</a></li>
+        <li><a href="demo.html" data-nav="demo.html">Raid Loot Demo</a></li>
+        <li><a href="points.html" data-nav="points.html">Points</a></li>
+        <li><a href="schedule.html" data-nav="schedule.html">Schedule</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <span class="eyebrow">Interactive mock</span>
+      <h1>Raid Loot Demo</h1>
+      <p class="lead">
+        Simulate a boss drop table: eight classic-style placeholder items, a small roster with
+        points and slot gear notes, then run assign. Winners favor class weight + lasting upgrade
+        delta—not micro-churn.
+      </p>
+    </section>
+
+    <div class="demo-banner">
+      <strong>Demo data.</strong> Item names, Best Suggested Class weights, and gear scores are
+      classic-feeling placeholders—not live WoW Forever / Blizzard item text. Logic is client-side only.
+    </div>
+
+    <div class="demo-controls">
+      <button type="button" class="btn btn-primary" id="btn-run">Run assign</button>
+      <button type="button" class="btn btn-secondary" id="btn-reset">Reset</button>
+      <span class="demo-status" id="demo-status">Loading…</span>
+    </div>
+
+    <p class="section-label">Boss drops <span class="badge badge-demo">8 placeholders</span></p>
+    <div class="loot-grid" id="loot-grid"></div>
+
+    <p class="section-label">Raid roster (sample) — points &amp; shoulder notes</p>
+    <div class="table-wrap mb-2">
+      <table>
+        <thead>
+          <tr>
+            <th>Member</th>
+            <th>Class</th>
+            <th>Points</th>
+            <th>Current shoulders (demo score)</th>
+          </tr>
+        </thead>
+        <tbody id="roster-body"></tbody>
+      </table>
+    </div>
+    <p class="text-sm muted" style="margin-bottom:1.5rem">
+      Full slot notes live in the assign engine (each item compares against the matching slot).
+      Shoulder column is a quick visual; upgrade Δ uses the correct slot per drop. Side-spec
+      sandbox exists in logic (not listed above) to show main-spec preference.
+    </p>
+
+    <p class="section-label">Assign announcements</p>
+    <div class="announcements" id="announcements">
+      <p class="text-sm muted" id="announce-empty">No assigns yet. Hit <strong style="color:var(--text-muted)">Run assign</strong>.</p>
+    </div>
+
+    <hr class="divider" />
+    <p class="text-sm muted">
+      Rules reference: <a href="loot.html">Loot FAQ</a> — flat costs, weights, anti-micro, ~60s announce cadence.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <strong>Intelligence</strong> · WoW Forever · adult guild
+  </footer>
+  <script src="js/nav.js"></script>
+  <script src="js/demo.js"></script>
+</body>
+</html>

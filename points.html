@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Points · Intelligence</title>
+  <meta name="description" content="Points dashboard mock for Intelligence guild — balances, monthly allotment, history." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Intelligence</span>
+        <span class="brand-sub">WoWForever · Guild</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-nav="index.html">Home</a></li>
+        <li><a href="loot.html" data-nav="loot.html">Loot FAQ</a></li>
+        <li><a href="demo.html" data-nav="demo.html">Raid Loot Demo</a></li>
+        <li><a href="points.html" data-nav="points.html">Points</a></li>
+        <li><a href="schedule.html" data-nav="schedule.html">Schedule</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <span class="eyebrow">Dashboard mock</span>
+      <h1>Points</h1>
+      <p class="lead">
+        Sample ledger for active members: balances, monthly base allotment, and recent history.
+        Numbers below are placeholders for visual critique—not live guild data.
+      </p>
+    </section>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="label">Monthly base</div>
+        <div class="value">50</div>
+        <div class="hint">Per active member</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Raid bonus</div>
+        <div class="value">+15</div>
+        <div class="hint">Per full night (sample)</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Epic cost</div>
+        <div class="value">40</div>
+        <div class="hint">Flat rarity cost</div>
+      </div>
+      <div class="stat-card">
+        <div class="label">Rare cost</div>
+        <div class="value">25</div>
+        <div class="hint">Flat rarity cost</div>
+      </div>
+    </div>
+
+    <p class="section-label">Member balances <span class="badge badge-gold">Placeholder</span></p>
+    <div class="table-wrap mb-2">
+      <table>
+        <thead>
+          <tr>
+            <th>Member</th>
+            <th>Class</th>
+            <th>Balance</th>
+            <th>Status</th>
+            <th>Last activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Thornak</strong></td>
+            <td><span class="class-tag">Warrior</span></td>
+            <td class="mono">210</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Raid · Sep 22</td>
+          </tr>
+          <tr>
+            <td><strong>Nyxara</strong></td>
+            <td><span class="class-tag">Death Knight</span></td>
+            <td class="mono">200</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Raid · Sep 22</td>
+          </tr>
+          <tr>
+            <td><strong>Draxen</strong></td>
+            <td><span class="class-tag">Rogue</span></td>
+            <td class="mono">190</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Raid · Sep 22</td>
+          </tr>
+          <tr>
+            <td><strong>Kaelith</strong></td>
+            <td><span class="class-tag">Mage</span></td>
+            <td class="mono">180</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Raid · Sep 20</td>
+          </tr>
+          <tr>
+            <td><strong>Belric</strong></td>
+            <td><span class="class-tag">Paladin</span></td>
+            <td class="mono">175</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Raid · Sep 22</td>
+          </tr>
+          <tr>
+            <td><strong>Vexara</strong></td>
+            <td><span class="class-tag">Warlock</span></td>
+            <td class="mono">165</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Raid · Sep 20</td>
+          </tr>
+          <tr>
+            <td><strong>Sylwen</strong></td>
+            <td><span class="class-tag">Priest</span></td>
+            <td class="mono">155</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Event · Sep 18</td>
+          </tr>
+          <tr>
+            <td><strong>Mirael</strong></td>
+            <td><span class="class-tag">Hunter</span></td>
+            <td class="mono">140</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Raid · Sep 20</td>
+          </tr>
+          <tr>
+            <td><strong>Fenn</strong></td>
+            <td><span class="class-tag">Druid</span></td>
+            <td class="mono">130</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Raid · Sep 22</td>
+          </tr>
+          <tr>
+            <td><strong>Oruun</strong></td>
+            <td><span class="class-tag">Shaman</span></td>
+            <td class="mono">120</td>
+            <td><span class="badge badge-success">Active</span></td>
+            <td class="muted text-sm">Raid · Sep 20</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="section-label">Recent history</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>When</th>
+            <th>Member</th>
+            <th>Event</th>
+            <th>Δ</th>
+            <th>Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="muted text-sm">Sep 22 · evening</td>
+            <td>Thornak</td>
+            <td>Raid attendance · full night</td>
+            <td class="mono" style="color:var(--success)">+15</td>
+            <td class="mono">210</td>
+          </tr>
+          <tr>
+            <td class="muted text-sm">Sep 22 · evening</td>
+            <td>Nyxara</td>
+            <td>Loot: Helm of Relentless Fury <span class="badge badge-demo">demo name</span></td>
+            <td class="mono" style="color:var(--danger)">−40</td>
+            <td class="mono">200</td>
+          </tr>
+          <tr>
+            <td class="muted text-sm">Sep 22 · evening</td>
+            <td>Draxen</td>
+            <td>Raid attendance · full night</td>
+            <td class="mono" style="color:var(--success)">+15</td>
+            <td class="mono">190</td>
+          </tr>
+          <tr>
+            <td class="muted text-sm">Sep 20 · evening</td>
+            <td>Kaelith</td>
+            <td>Loot: Ring of Arcane Confluence <span class="badge badge-demo">demo name</span></td>
+            <td class="mono" style="color:var(--danger)">−40</td>
+            <td class="mono">180</td>
+          </tr>
+          <tr>
+            <td class="muted text-sm">Sep 20 · evening</td>
+            <td>Mirael</td>
+            <td>Raid attendance · full night</td>
+            <td class="mono" style="color:var(--success)">+15</td>
+            <td class="mono">140</td>
+          </tr>
+          <tr>
+            <td class="muted text-sm">Sep 1 · allotment</td>
+            <td>— roster —</td>
+            <td>Monthly base grant (active members)</td>
+            <td class="mono" style="color:var(--success)">+50</td>
+            <td class="mono muted">—</td>
+          </tr>
+          <tr>
+            <td class="muted text-sm">Aug 28 · event</td>
+            <td>Sylwen</td>
+            <td>Guild strategy workshop</td>
+            <td class="mono" style="color:var(--success)">+10</td>
+            <td class="mono">155</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-sm muted" style="margin-top:1.25rem">
+      Live sync with addon / AI ledger is future work. Costs and grants match the
+      <a href="loot.html">Loot FAQ</a> narrative.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <strong>Intelligence</strong> · WoW Forever · adult guild
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>

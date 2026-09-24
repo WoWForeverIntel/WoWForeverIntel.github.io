@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loot System &amp; FAQ · Intelligence</title>
+  <meta name="description" content="Intelligence loot system: points, flat costs, class weights, anti-micro-upgrade rules, FAQ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Intelligence</span>
+        <span class="brand-sub">WoWForever · Guild</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-nav="index.html">Home</a></li>
+        <li><a href="loot.html" data-nav="loot.html">Loot FAQ</a></li>
+        <li><a href="demo.html" data-nav="demo.html">Raid Loot Demo</a></li>
+        <li><a href="points.html" data-nav="points.html">Points</a></li>
+        <li><a href="schedule.html" data-nav="schedule.html">Schedule</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <span class="eyebrow">Systems</span>
+      <h1>Loot system &amp; FAQ</h1>
+      <p class="lead">
+        Flat costs. Editable class weights. Winners chosen for lasting roster value—
+        not who shouted first or sandbagged their bags. Assignments should take about a minute.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="demo.html">See it in the demo</a>
+        <a class="btn btn-ghost" href="#faq">Jump to FAQ</a>
+      </div>
+    </section>
+
+    <div class="principle-callout" id="micro">
+      <div class="label">Key principle — read this first</div>
+      <h2>Minimize micro-upgrades</h2>
+      <p>
+        Avoid week-to-week slot churn for tiny gains. Intelligence maintains a <strong style="color:var(--text)">shared true gear state</strong>
+        of mains and the raid force across site, addon, and AI. When a piece drops, we prefer the
+        <strong style="color:var(--text)">largest lasting upgrade for the roster</strong>—not a +1 polish for someone already ahead.
+      </p>
+      <p class="chain">“A chain is only as strong as all its links”: upgrading 50 toons once beats upgrading one toon 50 micros.</p>
+      <p>
+        Assignments show both the <strong style="color:var(--text)">weighted victory</strong> and the <strong style="color:var(--text)">upgrade delta</strong>
+        (e.g. +30 vs +1). Micro deltas are visible and deprioritized. We also guard against
+        sandbagging intentionally bad gear to trick the algorithm, and we do not allow double-looting
+        the same slot without clear policy exceptions.
+      </p>
+    </div>
+
+    <h2>How loot works</h2>
+    <div class="grid-2">
+      <article class="card">
+        <h3>1. Points</h3>
+        <p>
+          Active members receive a <strong style="color:var(--text)">monthly base allotment</strong>.
+          Additional points come from raids attended, events, and other guild-defined contributions.
+          Points are the spend currency—not a bid.
+        </p>
+      </article>
+      <article class="card">
+        <h3>2. Flat item costs</h3>
+        <p>
+          Every item has a <strong style="color:var(--text)">fixed cost by rarity</strong> (and optionally by tier).
+          No bidding wars. If you win, you pay the listed cost. If you don’t have the points, you’re not in the pool.
+        </p>
+      </article>
+      <article class="card">
+        <h3>3. Best Suggested Class weights</h3>
+        <p>
+          Each item carries editable <strong style="color:var(--text)">Best Suggested Class</strong> weights
+          (e.g. Warrior 1.0, Paladin 0.85, Mage 0.1). Officers and theorycrafters can tune these over time.
+          Only candidates at or above the weight threshold compete for that drop.
+        </p>
+      </article>
+      <article class="card">
+        <h3>4. Winner selection (KEY)</h3>
+        <p>
+          Among best-weighted candidates who will use the item on <strong style="color:var(--text)">main spec</strong>
+          (side spec is weighted less), the winner is the one with the best combination of
+          <strong style="color:var(--text)">points standing</strong> and
+          <strong style="color:var(--text)">longest / largest lasting use</strong>—measured as upgrade delta
+          against shared gear state. Micros lose to real upgrades.
+        </p>
+      </article>
+    </div>
+
+    <h2>The ~60 second assign</h2>
+    <div class="card">
+      <ol class="feature-list" style="list-style: none;">
+        <li><strong style="color:var(--text)">Announce the winner</strong> — name, class, main vs side.</li>
+        <li><strong style="color:var(--text)">Say why</strong> — weight, upgrade delta, points context (and who was close).</li>
+        <li><strong style="color:var(--text)">Show point totals</strong> — before → after.</li>
+        <li><strong style="color:var(--text)">Deduct cost</strong> — ledger updates for site / addon / AI consumers.</li>
+      </ol>
+      <p style="margin-top:1rem">
+        Live raids keep the narrative pace human; the <a href="demo.html">Raid Loot Demo</a> compresses
+        the same logic into a fast client-side run with placeholder classic-style items.
+      </p>
+    </div>
+
+    <h2>Shared data plane</h2>
+    <p>
+      Site, in-game addon, and any AI assistant the guild uses should see the <em>same</em> points balances,
+      item costs, class weights, and main-spec gear snapshots. That shared picture is what makes
+      anti-micro and anti-sandbag rules enforceable instead of vibes-based.
+    </p>
+
+    <hr class="divider" />
+
+    <section id="faq">
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary>How do I earn points?</summary>
+          <div class="faq-body">
+            Active members get a monthly base grant. Extra points come from raid attendance, cleared
+            bosses / lockouts as defined by officers, and occasional events. Exact rates live on the
+            Points page once the live ledger is wired; the mock dashboard shows sample balances and history.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do item costs work?</summary>
+          <div class="faq-body">
+            Costs are flat by rarity (demo: epic 40, rare 25). No bidding. You must have enough points
+            at assign time. Costs are tunable by officers; they are not player-negotiated in raid.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Main spec vs side spec?</summary>
+          <div class="faq-body">
+            Main-spec use is preferred. Side-spec candidates can still appear in the pool when weight
+            allows, but a side-spec factor reduces their score so lasting main-spec upgrades win first.
+            The demo includes an off-spec sandbox entry to show this bias.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What is a “micro-upgrade” and why avoid it?</summary>
+          <div class="faq-body">
+            A micro-upgrade is a tiny slot improvement (think +1-style churn) when another raider would
+            gain a large lasting jump on the same piece. Micros waste raid time, inflate inequality,
+            and ignore roster strength. We show Δ prominently and deprioritize small deltas so the
+            algorithm—and the raid lead’s announcement—favor the bigger link in the chain.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do you stop sandbagging?</summary>
+          <div class="faq-body">
+            Shared true gear state means “I left greens equipped on purpose” doesn’t invent a fake +50 delta.
+            Officers can flag anomalies; the system compares against known previous loot and expected
+            progression. Intentional sandbagging to game weights or deltas is a guild-conduct issue,
+            not a clever exploit.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can someone double-loot the same slot?</summary>
+          <div class="faq-body">
+            Default policy: no. Once a slot is filled by a recent assign, further drops for that slot
+            prefer other candidates unless an officer exception applies (e.g. broken item, role change).
+            The demo focuses on first-pass assigns; double-loot guards land with the live ledger.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How does the Raid Loot Demo work?</summary>
+          <div class="faq-body">
+            Pure client-side JavaScript. Eight classic-style <em>placeholder</em> items (clearly labeled demo)
+            drop from a fictional boss. A small roster with points, classes, and slot notes competes.
+            “Run assign” resolves winners using points + class weight + upgrade delta (anti-micro),
+            then shows announcement cards with before/after points and cost deducted. No backend.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What’s coming with the addon?</summary>
+          <div class="faq-body">
+            An in-game addon will sync attendance cues, gear snapshots, and assign announcements with
+            the same data the site shows—so the raid lead isn’t copy-pasting between Discord and bags.
+            Until then, the site shell and demo define the rules of the road.
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong>Intelligence</strong> · WoW Forever · adult guild
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+</html>
