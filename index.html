@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Intelligence · WoW Forever</title>
-  <meta name="description" content="Intelligence — adult, high-IQ raiding guild for WoW Forever." />
+  <meta name="description" content="Intelligence — adult, high-IQ raiding guild for WoW Forever. Flat-cost loot, anti-micro upgrades, shared gear truth." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="page-home">
@@ -28,39 +28,201 @@
     </div>
   </header>
 
-  <main class="splash">
-    <section class="splash-hero" aria-label="Intelligence guild">
-      <div class="splash-art" role="img" aria-label="Fantasy raid hall with a glowing strategy table"></div>
-      <div class="splash-veil"></div>
-      <div class="splash-content">
-        <p class="splash-eyebrow">Adult · High-IQ · Raid-first</p>
-        <h1 class="splash-title">Intelligence</h1>
-        <p class="splash-tag">WoW Forever</p>
-        <p class="splash-lead">
-          A guild for adults who treat raiding like a craft — clear systems, honest incentives,
-          and a roster that gets stronger as a whole.
+  <main class="main home-main">
+    <!-- Cinematic band with real img (not CSS-only background) -->
+    <section class="hud-hero">
+      <div class="hud-hero-media">
+        <img
+          class="hud-hero-img"
+          src="assets/splash.png"
+          width="1600"
+          height="900"
+          alt="Fantasy raid council hall with a glowing strategy table"
+          decoding="async"
+          fetchpriority="high"
+        />
+        <div class="hud-hero-scan" aria-hidden="true"></div>
+        <div class="hud-hero-frame" aria-hidden="true"></div>
+      </div>
+      <div class="hud-hero-panel">
+        <div class="hud-meta">
+          <span class="hud-chip">SYS · GUILD</span>
+          <span class="hud-chip hud-chip-live">STATUS · FORMING</span>
+          <span class="hud-chip">GAME · WOW FOREVER</span>
+        </div>
+        <p class="eyebrow">Adult · High-IQ · Raid-first</p>
+        <h1>Intelligence</h1>
+        <p class="hud-sub">WoW Forever · operations surface for a guild that designs loot like a system, not a shouting match.</p>
+        <p class="lead">
+          We recruit adults who treat raiding like a craft: clear incentives, shared data,
+          and assignments that make the <em>whole roster</em> stronger. Points are earned.
+          Costs are flat. Weights favor lasting main-spec upgrades. Micro-churn loses on purpose.
         </p>
-        <div class="hero-actions splash-actions">
-          <a class="btn btn-primary" href="loot.html">How we loot</a>
-          <a class="btn btn-secondary" href="schedule.html">Raid nights</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="loot.html">Read the loot system</a>
+          <a class="btn btn-secondary" href="demo.html">Watch a demo assign</a>
+          <a class="btn btn-ghost" href="schedule.html">Raid schedule</a>
+        </div>
+        <dl class="hud-stats" aria-label="System at a glance">
+          <div>
+            <dt>Assign cadence</dt>
+            <dd>~60s</dd>
+          </div>
+          <div>
+            <dt>Bidding</dt>
+            <dd>None</dd>
+          </div>
+          <div>
+            <dt>Cost model</dt>
+            <dd>Flat / rarity</dd>
+          </div>
+          <div>
+            <dt>Priority</dt>
+            <dd>Max Δ · main</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="hud-section">
+      <div class="hud-section-head">
+        <span class="hud-label">01 · PURPOSE</span>
+        <h2>What Intelligence is for</h2>
+      </div>
+      <div class="grid-2">
+        <div class="card hud-card">
+          <h3>The guild</h3>
+          <p>
+            An adult roster for players who want high-signal discourse and accountable raiding.
+            Punctuality, ownership of your character, and strategy over noise. The name is the brief:
+            pre-educated decisions, not vibes and auctions.
+          </p>
+          <ul class="feature-list">
+            <li>Adult communication standards — clear calls, no ego loot theater.</li>
+            <li>Classic-feeling Forever progression with modern clarity on incentives.</li>
+            <li>Officers + theorycraft tune weights as real loot and trees become known.</li>
+          </ul>
+        </div>
+        <div class="card hud-card">
+          <h3>This site</h3>
+          <p>
+            The public ops layer for the guild: explain the loot rules, show how assigns resolve,
+            mock points and schedule, and (soon) sync with a live ledger and in-game addon
+            so site, raid lead, and AI share one gear truth.
+          </p>
+          <ul class="feature-list">
+            <li>Loot FAQ — the constitution members can actually read.</li>
+            <li>Raid Loot Demo — eight drops, scored the way live raids will be.</li>
+            <li>Points &amp; schedule shells — ready for real data when Forever settles.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="splash-strip">
-      <div class="splash-strip-inner">
-        <div class="splash-pill">
-          <strong>Flat-cost loot</strong>
-          <span>No bidding wars. Assign in about a minute.</span>
-        </div>
-        <div class="splash-pill">
-          <strong>Anti-micro upgrades</strong>
-          <span>Biggest lasting upgrade for the roster wins.</span>
-        </div>
-        <div class="splash-pill">
-          <strong>Shared gear truth</strong>
-          <span>Site, addon, and AI read the same picture.</span>
-        </div>
+    <section class="hud-section">
+      <div class="hud-section-head">
+        <span class="hud-label">02 · LOOT KERNEL</span>
+        <h2>How the system thinks</h2>
+      </div>
+      <div class="hud-grid-4">
+        <article class="card hud-tile">
+          <div class="hud-tile-code">PT</div>
+          <h3>Points</h3>
+          <p>Monthly base for active members. More from raids and events. Spend currency — not a bid.</p>
+        </article>
+        <article class="card hud-tile">
+          <div class="hud-tile-code">FC</div>
+          <h3>Flat cost</h3>
+          <p>Rarity sets the price. Common costs less, rare costs more. No bidding wars, no stalling the pull.</p>
+        </article>
+        <article class="card hud-tile">
+          <div class="hud-tile-code">WT</div>
+          <h3>Class weights</h3>
+          <p>Best Suggested Classes per item, editable as we learn Forever loot and talent trees.</p>
+        </article>
+        <article class="card hud-tile">
+          <div class="hud-tile-code">Δ+</div>
+          <h3>Longest use</h3>
+          <p>Among weighted mains, prefer the largest lasting upgrade. Side-spec is downranked on purpose.</p>
+        </article>
+      </div>
+
+      <div class="principle-callout hud-principle" id="micro" style="margin-top:1.5rem">
+        <div class="label">Key principle · always on</div>
+        <h2>Minimize micro-upgrades</h2>
+        <p>
+          Week-to-week slot churn for tiny gains is what plagues MMO loot. Intelligence keeps a
+          <strong style="color:var(--text)">shared true gear state</strong> across site, addon, and AI.
+          Prefer the big upgrade for the roster chain over a +1 polish on one toon.
+          Sandbagging gear to game Δ is a conduct problem — the system is built to see through it.
+        </p>
+        <p class="chain">“A chain is only as strong as all its links.” Upgrade fifty toons once &gt; one toon fifty micros.</p>
+        <a href="loot.html#micro">Full loot FAQ →</a>
+      </div>
+    </section>
+
+    <section class="hud-section">
+      <div class="hud-section-head">
+        <span class="hud-label">03 · PIPELINE</span>
+        <h2>From drop to announce</h2>
+      </div>
+      <ol class="hud-pipeline">
+        <li>
+          <span class="hud-step">1</span>
+          <div>
+            <strong>Drop</strong>
+            <p>Raid items enter the biddable pool — site / addon / AI see the same eight (or N) pieces.</p>
+          </div>
+        </li>
+        <li>
+          <span class="hud-step">2</span>
+          <div>
+            <strong>Score</strong>
+            <p>Weights × points × upgrade Δ × main-spec longevity. Micros and sandbags lose signal.</p>
+          </div>
+        </li>
+        <li>
+          <span class="hud-step">3</span>
+          <div>
+            <strong>Announce</strong>
+            <p>~60 seconds: winner, why, before→after points, cost deducted. Pulls keep moving.</p>
+          </div>
+        </li>
+        <li>
+          <span class="hud-step">4</span>
+          <div>
+            <strong>Ledger</strong>
+            <p>History and balances stay visible. No double-loot by default. Officers can audit.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="hero-actions" style="margin-top:1.25rem">
+        <a class="btn btn-primary" href="demo.html">Run the Raid Loot Demo</a>
+        <a class="btn btn-ghost" href="points.html">Points mock</a>
+      </div>
+    </section>
+
+    <section class="hud-section hud-section-last">
+      <div class="hud-section-head">
+        <span class="hud-label">04 · SURFACE MAP</span>
+        <h2>Where to go next</h2>
+      </div>
+      <div class="grid-3">
+        <a class="card hud-linkcard" href="loot.html">
+          <span class="hud-linkcode">/loot</span>
+          <h3>Loot FAQ</h3>
+          <p>Constitution: points, costs, weights, anti-micro, sandbagging, FAQ.</p>
+        </a>
+        <a class="card hud-linkcard" href="demo.html">
+          <span class="hud-linkcode">/demo</span>
+          <h3>Raid Loot Demo</h3>
+          <p>Eight placeholder drops. Hit Run assign. See winners, why, and Δ.</p>
+        </a>
+        <a class="card hud-linkcard" href="schedule.html">
+          <span class="hud-linkcode">/schedule</span>
+          <h3>Schedule</h3>
+          <p>Primary Tue/Thu sample nights (MT). Replace with live calendar later.</p>
+        </a>
       </div>
     </section>
   </main>
