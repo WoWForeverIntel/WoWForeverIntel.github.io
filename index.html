@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Intelligence · WoW Forever</title>
-  <meta name="description" content="Intelligence — adult, high-IQ raiding guild for WoW Forever. Points, loot, schedule, and raid demos." />
+  <meta name="description" content="Intelligence — adult, high-IQ raiding guild for WoW Forever." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
+<body class="page-home">
   <header class="site-header">
     <div class="nav-inner">
       <a class="brand" href="index.html">
@@ -28,91 +28,39 @@
     </div>
   </header>
 
-  <main class="main">
-    <section class="hero">
-      <span class="eyebrow">Adult · High-IQ · Raid-first</span>
-      <h1>Intelligence for <span>WoW Forever</span></h1>
-      <p class="lead">
-        A guild built for adults who treat raiding like a craft: clear systems, honest incentives,
-        and loot that strengthens the whole roster—not the loudest bidder.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="loot.html">Read the Loot FAQ</a>
-        <a class="btn btn-secondary" href="demo.html">Try the Raid Loot Demo</a>
+  <main class="splash">
+    <section class="splash-hero" aria-label="Intelligence guild">
+      <div class="splash-art" role="img" aria-label="Fantasy raid hall with a glowing strategy table"></div>
+      <div class="splash-veil"></div>
+      <div class="splash-content">
+        <p class="splash-eyebrow">Adult · High-IQ · Raid-first</p>
+        <h1 class="splash-title">Intelligence</h1>
+        <p class="splash-tag">WoW Forever</p>
+        <p class="splash-lead">
+          A guild for adults who treat raiding like a craft — clear systems, honest incentives,
+          and a roster that gets stronger as a whole.
+        </p>
+        <div class="hero-actions splash-actions">
+          <a class="btn btn-primary" href="loot.html">How we loot</a>
+          <a class="btn btn-secondary" href="schedule.html">Raid nights</a>
+        </div>
       </div>
     </section>
 
-    <h2 class="mt-0">What this site will do</h2>
-    <p>
-      WoWForever · Intelligence is the ops surface for the guild: points balances, flat-cost loot,
-      raid schedule, and a shared gear picture that site, addon, and AI can all read. The shell
-      below is live enough to critique; live data and publish (GitHub Pages / Netlify as
-      <strong style="color:var(--text)">wowf-intel</strong> or similar) come next.
-    </p>
-
-    <div class="grid-3" style="margin-top:1.5rem">
-      <article class="card">
-        <div class="card-icon">◆</div>
-        <h3>Points</h3>
-        <p>
-          Monthly base allotment for active members, plus earnings from raids and events.
-          Flat item costs by rarity—no bidding wars, no drama auctions.
-        </p>
-        <a href="points.html">Points dashboard →</a>
-      </article>
-      <article class="card">
-        <div class="card-icon">◇</div>
-        <h3>Loot</h3>
-        <p>
-          Best Suggested Class weights, main-spec priority, longest lasting upgrade.
-          Assign in about a minute: announce winner, why, totals, deduct cost.
-        </p>
-        <a href="loot.html">Loot system &amp; FAQ →</a>
-      </article>
-      <article class="card">
-        <div class="card-icon">▣</div>
-        <h3>Schedule &amp; Demo</h3>
-        <p>
-          Raid nights on the calendar. Interactive demo resolves placeholder boss drops
-          with the same rules the live system will use.
-        </p>
-        <a href="demo.html">Raid loot demo →</a>
-      </article>
-    </div>
-
-    <hr class="divider" />
-
-    <div class="grid-2">
-      <div>
-        <h2 class="mt-0">Guild pitch</h2>
-        <ul class="feature-list">
-          <li>Adult roster — communication, punctuality, and ownership of your character.</li>
-          <li>High-signal discourse: strategy over memes, systems over vibes.</li>
-          <li>Classic-feeling raid loot with modern clarity: weights, points, shared gear state.</li>
-          <li>Anti-micro-upgrade culture: upgrade the chain, not one link fifty times.</li>
-          <li>Site + addon + AI share one picture of mains and the raid force.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <span class="eyebrow">Key principle</span>
-        <h3>Minimize micro-upgrades</h3>
-        <p>
-          Week-to-week slot churn for +1 gains burns time and morale. Prefer the largest lasting
-          upgrade for the roster. A chain is only as strong as all its links: upgrading fifty
-          toons once beats polishing one toon fifty times.
-        </p>
-        <a href="loot.html#micro">Read how loot enforces this →</a>
-      </div>
-    </div>
-
-    <hr class="divider" />
-
-    <section>
-      <h2>Start here</h2>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="loot.html">Loot FAQ</a>
-        <a class="btn btn-secondary" href="demo.html">Raid Loot Demo</a>
-        <a class="btn btn-ghost" href="schedule.html">Raid schedule</a>
+    <section class="splash-strip">
+      <div class="splash-strip-inner">
+        <div class="splash-pill">
+          <strong>Flat-cost loot</strong>
+          <span>No bidding wars. Assign in about a minute.</span>
+        </div>
+        <div class="splash-pill">
+          <strong>Anti-micro upgrades</strong>
+          <span>Biggest lasting upgrade for the roster wins.</span>
+        </div>
+        <div class="splash-pill">
+          <strong>Shared gear truth</strong>
+          <span>Site, addon, and AI read the same picture.</span>
+        </div>
       </div>
     </section>
   </main>
