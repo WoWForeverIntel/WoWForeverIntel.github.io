@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interest · Intelligence</title>
+  <meta name="description" content="Sign interest for the Intelligence starter guild roster on WoW Forever. Character name + class. Live public list." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="page-interest">
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Intelligence</span>
+        <span class="brand-sub">WoWForever · Guild</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Menu">Menu</button>
+      <ul class="nav-links">
+        <li><a href="index.html" data-nav="index.html">Home</a></li>
+        <li><a href="loot.html" data-nav="loot.html">Loot FAQ</a></li>
+        <li><a href="demo.html" data-nav="demo.html">Raid Loot Demo</a></li>
+        <li><a href="points.html" data-nav="points.html">Points</a></li>
+        <li><a href="schedule.html" data-nav="schedule.html">Schedule</a></li>
+        <li><a href="interest.html" data-nav="interest.html">Interest</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero interest-hero">
+      <div class="hud-meta">
+        <span class="hud-chip">SYS · ROSTER</span>
+        <span class="hud-chip hud-chip-live">LAUNCH · NOV 4</span>
+        <span class="hud-chip">SIGNAL · INTEREST</span>
+      </div>
+      <span class="eyebrow">Starter guild signup</span>
+      <h1>Interest</h1>
+      <p class="lead">
+        Intelligence is forming a <strong>WoW Forever</strong> starter roster for a live launch
+        around <strong>Nov 4</strong>. Drop your character name and class so officers can see
+        who’s circling. This is interest only — not a full application yet.
+      </p>
+    </section>
+
+    <div id="interest-offline-banner" class="interest-banner" hidden>
+      <strong>Offline / local preview.</strong>
+      Supabase config is empty, so submissions stay in this browser only
+      (<code>intel-interest-local</code>) and are labeled
+      <em>local preview (not shared)</em>. Fill <code>js/supabase-config.js</code> to go live.
+    </div>
+
+    <div class="interest-layout">
+      <section class="card interest-form-card" aria-labelledby="interest-form-heading">
+        <div class="hud-section-head">
+          <span class="hud-label">01 · SIGNAL</span>
+          <h2 id="interest-form-heading">Add your interest</h2>
+        </div>
+        <p class="interest-note">
+          No email required. Officers will moderate spam later. One submit per 30 seconds.
+        </p>
+
+        <form id="interest-form" class="interest-form" novalidate>
+          <div class="interest-field">
+            <label for="character_name">Character name</label>
+            <input
+              type="text"
+              id="character_name"
+              name="character_name"
+              maxlength="24"
+              required
+              autocomplete="nickname"
+              placeholder="e.g. Ironquill"
+            />
+          </div>
+
+          <div class="interest-field">
+            <label for="class">Class</label>
+            <select id="class" name="class" required>
+              <option value="" disabled selected>Select class</option>
+              <option value="Warrior">Warrior</option>
+              <option value="Paladin">Paladin</option>
+              <option value="Hunter">Hunter</option>
+              <option value="Rogue">Rogue</option>
+              <option value="Priest">Priest</option>
+              <option value="Shaman">Shaman</option>
+              <option value="Mage">Mage</option>
+              <option value="Warlock">Warlock</option>
+              <option value="Druid">Druid</option>
+            </select>
+          </div>
+
+          <!-- Honeypot: leave empty. Hidden from users; bots often fill it. -->
+          <div class="interest-hp" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="interest-submit">Submit interest</button>
+          <p id="interest-status" class="interest-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="card interest-roster-card" aria-labelledby="interest-roster-heading">
+        <div class="interest-roster-head">
+          <div class="hud-section-head">
+            <span class="hud-label">02 · LIVE ROSTER</span>
+            <h2 id="interest-roster-heading">Who’s in</h2>
+          </div>
+          <span class="interest-count-badge" title="Visible interest count">
+            <span class="interest-count-label">COUNT</span>
+            <span id="interest-count">0</span>
+          </span>
+        </div>
+        <div id="interest-roster" class="interest-roster">
+          <p class="interest-empty">Loading roster…</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <strong>Intelligence</strong> · WoW Forever · adult guild
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/interest.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
