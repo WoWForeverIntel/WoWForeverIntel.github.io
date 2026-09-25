@@ -1,4 +1,4 @@
-/* Intelligence · WoW Forever — shared theme */
+/* Wise Fools · WoW Forever — shared theme */
 :root {
   --bg-deep: #0a0b0f;
   --bg: #0f1117;
@@ -96,8 +96,8 @@ img { max-width: 100%; }
 .brand:hover { color: var(--text); }
 .brand-mark {
   font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
   color: var(--gold-bright);
 }
 .brand-sub {

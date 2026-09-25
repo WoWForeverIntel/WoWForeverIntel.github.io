@@ -1,9 +1,12 @@
-# Intelligence · WoW Forever
+# Wise Fools · WoW Forever
 
-Static site shell for the **Intelligence** guild (adult, high-IQ raiding on WoW Forever).
+Static site shell for the **Wise Fools** guild (adult, high-IQ, casual competence on WoW Forever).
 
-Short identity: **WoWForever · Intelligence**  
-Future publish candidates: `wowf-intel` (GitHub Pages / Netlify) or similar — **not published yet**.
+Short identity: **WoWForever · Wise Fools**  
+Tagline: *casual competence · welcome, not watered down*
+
+Live site: [https://wowforeverintel.github.io/](https://wowforeverintel.github.io/)  
+Source tree: `/workspace/intelligence-site/` · Publish clone: `/workspace/wowf-publish/` (GitHub Pages repo `WoWForeverIntel/WoWForeverIntel.github.io`).
 
 ## Preview locally
 
